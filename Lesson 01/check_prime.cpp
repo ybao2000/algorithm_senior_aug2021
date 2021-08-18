@@ -15,7 +15,7 @@ bool isPrime(int n){
 
 int main(){
   // int n = 1e9+7;
-  int n = 2021;
+  int n = 2019;
   if(isPrime(n)){
     cout << "Prime" << endl;
   } 

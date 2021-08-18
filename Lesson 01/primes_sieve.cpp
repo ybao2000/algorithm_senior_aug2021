@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// using the algorithm called sieve of eratosthenes
 vector<int> primes_sieve(int n){
   // bool marks[n+1] = {true};
   // how to make all true?
