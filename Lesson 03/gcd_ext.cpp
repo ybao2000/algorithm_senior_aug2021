@@ -18,7 +18,7 @@ ll get_gcd_ext(ll a, ll b, ll& x, ll& y){
 
 int main(){
   ll a, b;
-  a = 24;
+  a = 200;
   b = 60;
   ll x, y;
   ll g = get_gcd_ext(a, b, x, y);
