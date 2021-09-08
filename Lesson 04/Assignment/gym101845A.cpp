@@ -7,6 +7,22 @@ const int SIZE = 5;
 const ll MOD = 1e9+7;
 typedef ll(*mat)[SIZE];
 
+ll I[SIZE][SIZE] = {
+  {1, 0, 0, 0, 0},
+  {0, 1, 0, 0, 0},
+  {0, 0, 1, 0, 0},
+  {0, 0, 0, 1, 0},
+  {0, 0, 0, 0, 1}
+};
+
+ll A[SIZE][SIZE] = {
+  {16, 9, 4, 1, 0},
+  {1, 0, 0, 0, 0},
+  {0, 1, 0, 0, 0},
+  {0, 0, 1, 0, 0},
+  {0, 0, 0, 1, 0}
+};  
+
 mat matrix_product(mat A, mat B){
   mat C = new ll[SIZE][SIZE];
   for(int i=0; i<SIZE; i++){
@@ -23,13 +39,7 @@ mat matrix_product(mat A, mat B){
 mat power_mod(mat A, ll k){
   ll power = k;
   mat base = A;
-  ll I[SIZE][SIZE] = {
-    {1, 0, 0, 0, 0},
-    {0, 1, 0, 0, 0},
-    {0, 0, 1, 0, 0},
-    {0, 0, 0, 1, 0},
-    {0, 0, 0, 0, 1}
-  };
+
   mat res = I;
   while (power > 0) {
     if(power % 2 == 1){
@@ -45,14 +55,6 @@ mat power_mod(mat A, ll k){
 }
 
 int main(){
-  ll A[SIZE][SIZE] = {
-    {16, 9, 4, 1, 0},
-    {1, 0, 0, 0, 0},
-    {0, 1, 0, 0, 0},
-    {0, 0, 1, 0, 0},
-    {0, 0, 0, 1, 0}
-  };  
-
 
   ll n;
   cin >> n;
@@ -79,12 +81,12 @@ int main(){
   }
   else {
       // d >= 4
-    mat res = power_mod(A, d-3);
+    mat res = power_mod(A, d-4);
     ll w[5];
-    for (int i=0; i<5; i++){
+    for (int i=0; i<5; i++) {
       w[i] = 0;
       for(int j=0; j<5; j++){
-        w[i] = (w[i] + res[i][j] * v[3-j] % MOD) % MOD;
+        w[i] = (w[i] + res[i][j] * v[4-j] % MOD) % MOD;
       }
     }
     ll t = w[0] + w[1] + w[2] + w[3];
@@ -93,6 +95,4 @@ int main(){
     }
     cout << t % MOD << endl;
   }
-  
-
 }
