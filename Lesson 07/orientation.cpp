@@ -23,10 +23,12 @@ int orientation(Point a, Point b, Point c){
   int d4 = c.y - a.y;
   int det = d1 * d4 - d2 * d3;
   if (det == 0) return 0;
-  return det > 0 ? 1 : 2; 
+  return det > 0 ? 2 : 1; 
 }
 
 int main(){
-  Point p;
-  p.x = 10;
+  Point p1 = {0, 0};
+  Point p2 = {1, 1};
+  Point p3 = {2, 2};
+  cout << orientation(p1, p2, p3) << endl;
 }
