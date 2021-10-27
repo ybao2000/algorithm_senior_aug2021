@@ -150,7 +150,7 @@ void change_parent(int x, int y){
   parents[x] = y;
 }
 
-void get_LCM(int x, int y){
+void get_LCA(int x, int y){
   int node_1 = x;
   int node_2 = y;
   int level_1 = get_level(node_1);
@@ -213,7 +213,7 @@ int main(){
         break;
       case 7: // get LCM
         cin >> x >> y;
-        get_LCM(x-1, y-1);
+        get_LCA(x-1, y-1);
         break;
     }
   }
