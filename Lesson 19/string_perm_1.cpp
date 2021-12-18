@@ -3,6 +3,9 @@
 using namespace std;
 
 // you need auxiliary string
+// loop through each element
+// and appending the element to the ans
+// then recursively call for the remaining
 void permute(string a, string ans){
   if (a.length() == 0){
     cout << ans << "\n";

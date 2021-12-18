@@ -3,6 +3,8 @@
 using namespace std;
 string a;
 int n;
+// backtracking
+
 void permute(int idx) {
   if (idx == n-1) {
     cout << a << "\n";
