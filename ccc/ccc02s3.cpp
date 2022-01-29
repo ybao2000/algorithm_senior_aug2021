@@ -36,7 +36,7 @@ int main(){
         dir = (dir+1)%4;
       }   
       else  {
-        dir = (dir-1)%4;
+        dir = (dir+3)%4;
       }
     }
     for(int i=0; i<r; i++){

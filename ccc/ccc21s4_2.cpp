@@ -1,10 +1,6 @@
-#include <iostream>
-#include <vector>
-#include <queue>
-#include <algorithm>
-#include <set>
-
+#include <bits/stdc++.h>
 using namespace std;
+
 typedef pair<int, int> iPair;
 const int SIZE = 200001;  // 1 for offset
 const int INF = int(1e9);
@@ -36,9 +32,9 @@ void bfs() {
 }
 
 int main() {
-  ios_base::sync_with_stdio(0);
+  ios::sync_with_stdio(0);
   cin.tie(0);
-  cout.tie(0);  
+
   cin >> N >> W >> D;
   for(int i=0; i<W; i++){
     int a, b;

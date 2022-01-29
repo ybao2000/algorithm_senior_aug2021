@@ -1,5 +1,4 @@
-#include <iostream>
-#include <iomanip>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main(){
@@ -18,6 +17,6 @@ int main(){
     // trapzoidal area = (a+b)*h/2
     area += w[i] * (h[i] + h[i+1])/2.0;
   }
-  cout << fixed << setprecision(1);
-  cout << area << endl;
+  // cout << fixed << setprecision(1) << area << "\n";
+  printf("%.1f\n", area);
 }
